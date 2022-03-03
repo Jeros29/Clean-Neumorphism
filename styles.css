@@ -1,0 +1,65 @@
+:root {
+    --dark-theme-bg: #333;
+    --dark-theme-colour: #FFF;
+    --dark-theme-border: solid .5rem #333;
+    --dark-theme-dark-shadow: rgb(0, 0, 0, .5);
+    --dark-theme-light-shadow: rgb(100, 100, 100, .15);
+
+    --light-theme-bg: #FFF;
+    --light-theme-colour: #333;
+    --light-theme-border: solid .5rem #EEE;
+    --light-theme-dark-shadow: rgb(100, 100, 100, .15);
+    --light-theme-light-shadow: rgb(255, 255, 255, .6);
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #EEE;
+    color: var(--light-theme-colour);
+    overflow: hidden;
+}
+
+.neumorphism {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 10rem;
+    aspect-ratio: 1 / 1;
+
+    border: var(--light-theme-border);
+    border-radius: 3em;
+    box-shadow: .75rem .75rem 1rem var(--light-theme-dark-shadow),
+                -.75rem -.75rem 1rem var(--light-theme-light-shadow);
+
+    transition: .4s;
+}
+
+.neumorphism .element {
+    width: inherit;
+    aspect-ratio: inherit;
+    
+    background-color: inherit;
+    border: inherit;
+    border-radius: inherit;
+    border-radius: 50%;
+    box-shadow: inherit;
+
+    transform: scale(.4);
+    transition: .5s;
+}
+
+.neumorphism:hover .element {
+    transform: scale(.6);
+}
+
+.neumorphism:hover {
+    box-shadow: .75rem .75rem 1rem var(--light-theme-dark-shadow),
+                -.75rem -.75rem 1rem var(--light-theme-light-shadow), 
+                inset .75rem .75rem 1rem var(--light-theme-dark-shadow),
+                inset -.75rem -.75rem 1rem var(--light-theme-light-shadow);
+    
+    cursor: pointer;
+}
