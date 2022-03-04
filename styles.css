@@ -2,13 +2,13 @@
     --dark-theme-bg: #333;
     --dark-theme-colour: #FFF;
     --dark-theme-border: solid .5rem #333;
-    --dark-theme-dark-shadow: rgb(0, 0, 0, .5);
-    --dark-theme-light-shadow: rgb(100, 100, 100, .15);
+    --dark-theme-dark-shadow: rgb(0, 0, 0, .4);
+    --dark-theme-light-shadow: rgb(100, 100, 100, .225);
 
     --light-theme-bg: #FFF;
     --light-theme-colour: #333;
     --light-theme-border: solid .5rem #EEE;
-    --light-theme-dark-shadow: rgb(100, 100, 100, .15);
+    --light-theme-dark-shadow: rgb(100, 100, 100, .075);
     --light-theme-light-shadow: rgb(255, 255, 255, .6);
 }
 
@@ -17,8 +17,8 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #EEE;
-    color: var(--light-theme-colour);
+    background-color: var(--dark-theme-bg);
+    color: var(--dark-theme-colour);
     overflow: hidden;
 }
 
@@ -26,13 +26,19 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 10rem;
+    padding: 1em;
+    /* max-width: 40ch; */
+    width: 15rem;
     aspect-ratio: 1 / 1;
 
-    border: var(--light-theme-border);
-    border-radius: 3em;
-    box-shadow: .75rem .75rem 1rem var(--light-theme-dark-shadow),
-                -.75rem -.75rem 1rem var(--light-theme-light-shadow);
+    border: var(--dark-theme-border);
+    border-radius: 1em;
+    box-shadow: .5rem .5rem 1rem var(--dark-theme-dark-shadow),
+                -.5rem -.5rem 1rem var(--dark-theme-light-shadow);
+
+    font-size: 1rem;
+    line-height: 1.5;
+    letter-spacing: .1em;
 
     transition: .4s;
 }
@@ -52,14 +58,14 @@ body {
 }
 
 .neumorphism:hover .element {
-    transform: scale(.6);
+    transform: scale(.75);
 }
 
 .neumorphism:hover {
-    box-shadow: .75rem .75rem 1rem var(--light-theme-dark-shadow),
-                -.75rem -.75rem 1rem var(--light-theme-light-shadow), 
-                inset .75rem .75rem 1rem var(--light-theme-dark-shadow),
-                inset -.75rem -.75rem 1rem var(--light-theme-light-shadow);
+    box-shadow: .5rem .5rem 1rem var(--dark-theme-dark-shadow),
+                -.5rem -.5rem 1rem var(--dark-theme-light-shadow), 
+                inset .5rem .5rem 1rem var(--dark-theme-dark-shadow),
+                inset -.5rem -.5rem 1rem var(--dark-theme-light-shadow);
     
     cursor: pointer;
 }
